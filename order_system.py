@@ -63,7 +63,7 @@ def place_order(menu):
         # TODO: Let the customer know if they should type 'n' or 'N' to quit
         # TODO: Write a conditional statement that checks the user's input
         # TODO: The conditional statement should check for 'n' or 'N'
-        if input("Would you like to keep ordering? (Y) or (N) to quit: ").lower() == 'n':
+        if input("Would you like to keep ordering? (N)o to quit: ").lower() == 'n':
             # TODO: Write a print statement that thanks the customer for their order
             print("Thank you for your order!")
 
@@ -113,6 +113,8 @@ def update_order(order, menu_selection, menu_items):
             # TODO: Check if the quantity is a number, default to 1 if not
             if not quantity.isdigit():
                 quantity = 1
+            else:
+                quantity = int(quantity)
             # TODO: Add a dictionary to the order list 
             # TODO: The dictionary should include the item name, price, and quantity
             # TODO: Use the following names for the dictionary keys:
@@ -126,7 +128,7 @@ def update_order(order, menu_selection, menu_items):
         # TODO: When the user's input isn't valid, 
         # TODO: tell the customer that their input isn't valid
         else:
-            print("Please enter an item on the menu.")
+            print("Sorry, that number isn't an option.")
     # TODO: When the menu selection wasn't valid:
     # TODO: Print the menu selection and 
     # TODO: Tell the customer they didn't select a menu option
